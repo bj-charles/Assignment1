@@ -1,0 +1,119 @@
+CEN4020 Homework 1 - answers.txt
+
+------3(E)------
+
+(a) Paste the console output you saved at the end of step 3.C
+
+Username for 'https://github.com': bj-charles                  
+Password for 'https://bj-charles@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bj-charles/Assignment1.git
+   3d373c9..5751a92  master -> master
+
+(b) How many commits have been done to the repository (not only by you, but by
+anyone) so far? Write the git command you used to get this information
+
+There have been a total of 4 commits made to the repository.
+
+Command used: git log
+
+(c) When was the .gitignore file modified last? Write the git command you used
+to get this information
+
+The .gitignore was modified last on Thursday, Jan 10th at 4:45 PM (16:45 PM)
+
+Command used: git log --follow .gitignore
+
+
+(d) Mention two reasons why branches are used in a Git repository
+
+Branches in a git repository are extremely useful for organizing and creating
+layers of abstraction between pieces of a software product. Being able to
+branch off from the master branch to develop a bug fix or new feature
+is very intuitive from an organizational standpoint and helps prevent
+developers from colliding during development.
+
+Branching also allows for different types of operational organization in terms
+of how the main remote repository is managed. Since most branches will need
+to be merged into master eventually, having the separation of ideas allows
+an integration manager or whoever is in charge of merging have a simpler
+idea of how the pieces of the software system work together and therefore
+how to avoid conflicts in the individual pieces when they need to be merged.
+
+(e) What is the difference between git log and git status?
+
+git log outputs a history of commits along with the position of the HEAD
+and various branches.
+
+git status gives specific details on the current working directory (what
+has changed, what branch we're currently on, etc.) and what is staged for
+the next commit.
+
+(f) What command would you use to see the commits where “Weapon.h” was one
+of the committed files?
+
+git log --follow "Weapon.h"
+
+(g) What command would you use to see the commits whose commit message
+contains the word “file”?
+
+git log --grep='file'
+
+(h) In the context of object-oriented programming (I) What is inheritance? (II)
+What is polymorphism? (III) What is encapsulation?
+
+(I)		
+
+	Inheritance is the use of a simple or "base" class that has many 
+	characteristics of more complex components to be used to generate more
+	complex classes. For example, a rectangle and rhombus class could both
+	inherit features from a parallelogram class because both a rectangle
+	and rhombus possess characteristics and features of a parallelogram.
+
+	This can be considered similar to a "is a" relationship (i.e. a rectangle
+	is a parallelogram).
+
+(II)	
+
+	Polymorphism is the idea of using a base class as pieces for more complex
+	objects that possess features of the base class, and may need to override
+	some functionality of the base class.
+
+	This relationship is often considered similar to a "has (a)" relationship
+	(i.e. A car has wheels)
+
+(III)
+
+	Encapsulation is the process of putting together various pieces of code
+	together to form a functioning class, often with varying levels of access
+	to internal function data (i.e. function would get a piece of private
+	data via a function call instead of direct access).
+
+(i) What is the main difference between the “Dictator and Lieutenants” workflow
+and the “Integration management” workflow”?
+
+The main difference between the "Dictator and Lieutenants" (DnL) and "Integration
+Management" (IM) workflows is the level of responsibility of the manager / person
+who actually pushes to the "blessed" repository. In the DnL workflow, lieutenants
+maintain part of the responsibility for merges and conflicts so blame is spread
+among several people. In the IM workflow, although developers can push and pull
+to their own private and public directories, there is a single point of failure
+when it comes to merging and pushing to the blessed repository. Therefore,
+in the IM workflow should sometihing happen to the integration manager or the
+integration manager make crucial mistakes, there isn't another layer of
+protection against causing issues for the entire development team.
+
+(j) Why a team of 100 developers would benefit more by following the “Dictator
+and Lieutenants” workflow instead of the “Centralized” workflow?
+
+In the DnL workflow, there are more points of failure as the responsibility of
+merging and managing conflicts is spread out, which prevents overload on a
+single integration manager / dictator, but also allows for more safeguards
+against a single integration manager making mistakes and causing problems
+for the entire development team.
+
