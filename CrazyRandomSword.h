@@ -34,4 +34,4 @@ public:
 
   virtual double hit(double armor);
 
-}
+};
