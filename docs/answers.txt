@@ -1,11 +1,11 @@
 CEN4020 Homework 1 - answers.txt
 
-------3(E)------
+------Problem 3(E)------
 
 (a) Paste the console output you saved at the end of step 3.C
 
-Username for 'https://github.com': bj-charles                  
-Password for 'https://bj-charles@github.com': 
+Username for 'https://github.com': bj-charles
+Password for 'https://bj-charles@github.com':
 Counting objects: 3, done.
 Delta compression using up to 12 threads.
 Compressing objects: 100% (2/2), done.
@@ -67,9 +67,9 @@ git log --grep='file'
 (h) In the context of object-oriented programming (I) What is inheritance? (II)
 What is polymorphism? (III) What is encapsulation?
 
-(I)		
+(I)
 
-	Inheritance is the use of a simple or "base" class that has many 
+	Inheritance is the use of a simple or "base" class that has many
 	characteristics of more complex components to be used to generate more
 	complex classes. For example, a rectangle and rhombus class could both
 	inherit features from a parallelogram class because both a rectangle
@@ -78,7 +78,7 @@ What is polymorphism? (III) What is encapsulation?
 	This can be considered similar to a "is a" relationship (i.e. a rectangle
 	is a parallelogram).
 
-(II)	
+(II)
 
 	Polymorphism is the idea of using a base class as pieces for more complex
 	objects that possess features of the base class, and may need to override
@@ -117,3 +117,20 @@ single integration manager / dictator, but also allows for more safeguards
 against a single integration manager making mistakes and causing problems
 for the entire development team.
 
+------Problem 5------
+
+Is the RoleGame prototype using polymorphism and/or encapsulation? If you
+find that the prototype is using any of these two OOP principles, please
+discuss in which way the prototype is using it.
+
+The RoleGame prototype uses both polymorphism and enapsulation in its
+implementation. The use of polymorphism is apparent in the structure of the
+Weapon and various dervied classes (CommonSword, CommonSpear, etc.). Each
+of the derived weapon classes inherits from the Weapon class because each
+of the weapons can be defined with a "is a" relationship with regard to the
+base class (i.e. CommonSword is a weapon).
+
+Similarly, the various levels of abstraction between a basic weapon and
+actually using a weapon class are representative of encapsulation. Each level
+of abstraction also only had access to what was necessary from the structure
+below it (i.e. using function calls to access private / protected data).
